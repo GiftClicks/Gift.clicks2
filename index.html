@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>برای تو، با تمام قلبم 🤍</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{font-family:Tahoma,"Segoe UI",sans-serif;color:#fff;background:#160b18}
+.page{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+padding:22px;opacity:0;pointer-events:none;transform:scale(.96);
+transition:opacity .8s ease,transform .8s ease}
+.page.active{opacity:1;pointer-events:auto;transform:scale(1)}
+/* romantic backgrounds */
+.p1{background:radial-gradient(circle at 20% 15%,#e88ca9 0,#8d3d61 28%,#32152e 65%,#120812 100%)}
+.p2{background:radial-gradient(circle at 80% 15%,#f2b4b4 0,#9c536d 25%,#382039 68%,#120b17)}
+.p3{background:radial-gradient(circle at 30% 80%,#d99cbd 0,#70456f 27%,#26162f 65%,#0e0912)}
+.p4{background:radial-gradient(circle at 70% 30%,#f0b77d 0,#a85f68 25%,#44243d 62%,#120a15)}
+.p5{background:radial-gradient(circle at 50% 15%,#ffb0c9 0,#9a3e61 23%,#3b172d 60%,#0d070c)}
+.card{position:relative;width:min(520px,94vw);min-height:420px;padding:48px 27px 34px;
+display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+border-radius:38px;background:linear-gradient(145deg,rgba(255,255,255,.20),rgba(255,255,255,.07));
+backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.35);
+box-shadow:0 25px 80px rgba(0,0,0,.35),inset 0 0 35px rgba(255,255,255,.06);
+overflow:visible}
+.card:before,.card:after{content:"♡";position:absolute;color:#ffd8e5;font-size:42px;opacity:.7}
+.card:before{top:13px;right:22px}.card:after{bottom:5px;left:22px;font-size:31px}
+.corner{position:absolute;width:75px;height:75px;border:2px solid rgba(255,210,225,.5)}
+.corner.tl{top:14px;left:14px;border-right:0;border-bottom:0;border-radius:25px 0 0 0}
+.corner.br{bottom:14px;right:14px;border-left:0;border-top:0;border-radius:0 0 25px 0}
+.badge{font-size:42px;margin-bottom:9px;filter:drop-shadow(0 5px 10px #0004)}
+h1{font-size:29px;line-height:1.8;margin:4px 0 20px;
+text-shadow:0 3px 16px rgba(0,0,0,.28)}
+p{font-size:18px;line-height:2.25;margin:0;color:#fff8fb}
+.accent{color:#ffd8e5;font-weight:bold}
+.next{margin-top:30px;border:1px solid #ffffff55;border-radius:50px;padding:13px 28px;
+font:inherit;font-size:16px;color:#fff;background:linear-gradient(90deg,#d75b83aa,#a84e7aaa);
+box-shadow:0 8px 25px #0003;cursor:pointer;transition:.25s}
+.next:active{transform:scale(.96)}
+.dots{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:30}
+.dot{width:7px;height:7px;border-radius:50%;background:#fff5}.dot.on{width:22px;border-radius:8px;background:#fff}
+#petals{position:fixed;inset:0;z-index:20;pointer-events:none;overflow:hidden}
+.petal{position:absolute;top:-55px;animation:fall linear forwards;filter:drop-shadow(0 4px 5px #0003)}
+@keyframes fall{0%{transform:translate3d(0,-50px,0) rotate(0deg);opacity:0}
+12%{opacity:1}100%{transform:translate3d(var(--x),110vh,0) rotate(650deg);opacity:.75}}
+.final .card{background:linear-gradient(145deg,rgba(255,205,220,.24),rgba(255,255,255,.08));
+box-shadow:0 25px 90px rgba(0,0,0,.42),0 0 45px rgba(255,150,185,.18)}
+.final h1{color:#ffe2eb;font-size:32px}
+.final p{font-size:19px}
+.order{margin-top:28px;padding:14px 30px;border:0;border-radius:50px;color:white;
+font:inherit;font-size:17px;cursor:pointer;background:linear-gradient(90deg,#ef6f9b,#bb4c7b);
+box-shadow:0 10px 30px #0005}
+.site-logo{position:fixed;top:16px;right:16px;width:58px;height:58px;object-fit:contain;z-index:100;filter:drop-shadow(0 4px 10px rgba(0,0,0,.35))}
+</style>
+</head>
+<body>
+<img src="logo.png" class="site-logo" alt="Logo">
+
+<section class="page p1 active">
+<div class="card"><i class="corner tl"></i><i class="corner br"></i>
+<div class="badge">🌹</div>
+<h1>برای تو، با تمام قلبم</h1>
+<p>بعضی آدم‌ها فقط وارد زندگی آدم نمی‌شن...<br>
+<span class="accent">میان و رنگِ زندگی رو عوض می‌کنن.</span> ✨</p>
+<button class="next" onclick="go(1)">یه قدم دیگه با من بیا 🤍</button>
+</div></section>
+
+<section class="page p2">
+<div class="card"><i class="corner tl"></i><i class="corner br"></i>
+<div class="badge">🌈</div>
+<h1>از وقتی تو اومدی...</h1>
+<p>زندگی من از زمانی که اومدی<br>رنگین‌تر شده. 🎨<br>
+حتی روزهای معمولی هم<br><span class="accent">کنار تو قشنگ‌ترن.</span> 💗</p>
+<button class="next" onclick="go(2)">این یکی رو هم بخون 🫶</button>
+</div></section>
+
+<section class="page p3">
+<div class="card"><i class="corner tl"></i><i class="corner br"></i>
+<div class="badge">🕊️</div>
+<h1>آرامشی که با تو دارم</h1>
+<p>کنار تو یه حس عجیبی دارم...<br>
+انگار برای چند لحظه<br>همه‌چیز آروم می‌شه. 🌙<br>
+<span class="accent">ممنونم که این حس رو به زندگی من آوردی.</span> 🤍</p>
+<button class="next" onclick="go(3)">حرف آخرمون مونده 🌷</button>
+</div></section>
+
+<section class="page p4">
+<div class="card"><i class="corner tl"></i><i class="corner br"></i>
+<div class="badge">💌</div>
+<h1>و چیزی که شاید کمتر گفتم...</h1>
+<p>ممنونم برای حضورت، برای خنده‌هات،<br>
+برای تمام لحظه‌هایی که ساختیم. 🥹❤️<br><br>
+از بین تمام اتفاق‌های زندگی،<br>
+<span class="accent">آشنایی با تو برای من یکی از قشنگ‌ترین‌هاست.</span></p>
+<button class="next" onclick="go(4)">حالا وقتشه... 🌹</button>
+</div></section>
+
+<section class="page p5 final">
+<div id="petals"></div>
+<div class="card"><i class="corner tl"></i><i class="corner br"></i>
+<div class="badge">💐</div>
+<h1>تیر آخر... ❤️</h1>
+<p>اگر قرار باشه فقط یه جمله بگم،<br><br>
+<span class="accent">می‌خوام بدونی بودنت برای من خیلی باارزشه.</span><br><br>
+دوستت دارم؛ نه فقط برای روزهای خوب،<br>
+بلکه برای تمام روزهایی که با هم می‌سازیم. 🫂❤️<br><br>
+مرسی که توی زندگی منی. 🌹</p>
+<button class="order" onclick="window.open('https://www.instagram.com/Broz.clicks/','_blank')">این یکی رو با عشق سفارش می‌دم 💌</button>
+</div></section>
+
+<div class="dots" id="dots"></div>
+<script>
+let current=0;
+const pages=document.querySelectorAll('.page'),dots=document.getElementById('dots');
+for(let i=0;i<pages.length;i++){let d=document.createElement('span');d.className='dot'+(i===0?' on':'');dots.appendChild(d)}
+function go(n){
+ pages[current].classList.remove('active');current=n;pages[current].classList.add('active');
+ document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i===current));
+ if(current===4) rain();
+}
+function rain(){
+ const box=document.getElementById('petals');box.innerHTML='';
+ const flowers=['🌹','🌷','🌸','🌺','💮','💐','🌼'];
+ for(let i=0;i<85;i++){
+  const e=document.createElement('span');e.className='petal';
+  e.textContent=flowers[Math.floor(Math.random()*flowers.length)];
+  e.style.left=(Math.random()*108-4)+'%';
+  e.style.setProperty('--x',(Math.random()*280-140)+'px');
+  e.style.animationDuration=(3.2+Math.random()*4)+'s';
+  e.style.animationDelay=(Math.random()*2.5)+'s';
+  e.style.fontSize=(17+Math.random()*20)+'px';
+  box.appendChild(e);
+ }
+}
+</script>
+</body>
+</html>
